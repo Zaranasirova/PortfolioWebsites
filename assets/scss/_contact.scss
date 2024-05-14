@@ -1,0 +1,206 @@
+main {
+  .main-content {
+    .content {
+      display: none;
+      .container {
+        @include container;
+        .caption {
+          @include title;
+          padding-top: 50px;
+          color: var(--colorblack);
+        }
+        .contact-text-pink {
+          color: var(--colorpink);
+          text-align: center;
+          font-weight: 700;
+          font-size: 26px;
+          padding-top: 15px;
+        }
+        .contact-text {
+          text-align: center;
+          font-weight: 700;
+          font-size: 22px;
+          padding: 12px 0;
+          color: var(--colorblack);
+        }
+        .contact {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 0;
+          @media (max-width: 1050px) {
+            flex-wrap: wrap;
+          }
+          .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+            align-items: center;
+            width: 25%;
+            @media (max-width: 1050px) {
+              width: 50%;
+            }
+            @media (max-width: 670px) {
+              width: 100%;
+            }
+            i {
+              color: var(--colorpink);
+              font-size: 20px;
+            }
+            h5 {
+              color: var(--colorblack);
+              font-size: 20px;
+            }
+            a {
+              color: var(--colorgrey);
+              font-size: 18px;
+            }
+          }
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 40px 0;
+          .nameandemail {
+            display: flex;
+            gap: 38px;
+            #name {
+              width: 50%;
+              border-radius: 20px;
+              height: 35px;
+              background-color: var(--colorgrey);
+              border: 1px solid transparent;
+              padding: 0 20px;
+              font-size: 17px;
+              color: rgb(207, 203, 203);
+            }
+            #email {
+              width: 50%;
+              border-radius: 20px;
+              height: 35px;
+              background-color: var(--colorgrey);
+              border: 1px solid transparent;
+              padding: 0 20px;
+              font-size: 17px;
+              color: rgb(207, 203, 203);
+            }
+          }
+
+          .subject-text {
+            #subject {
+              width: 100%;
+              border-radius: 20px;
+              height: 35px;
+              background-color: var(--colorgrey);
+              border: 1px solid transparent;
+              padding: 0 20px;
+              font-size: 17px;
+              color: rgb(207, 203, 203);
+            }
+          }
+          .message-part {
+            #text {
+              width: 100%;
+              height: 150px;
+              border-radius: 20px;
+              background-color: var(--colorgrey);
+              border: 1px solid transparent;
+              padding: 0 20px;
+              font-size: 17px;
+              color: rgb(207, 203, 203);
+            }
+          }
+          #send {
+            width: 180px;
+            padding: 13px 2px;
+            border: 1px solid transparent;
+            border-radius: 45px;
+            background-color: var(--colorpink);
+            color: var(--colorwhite);
+            font-size: 16px;
+            &:hover {
+              transform: scale(1.1);
+              transition: all 0.3s;
+            }
+          }
+        }
+        .error {
+          color: red;
+          padding-bottom: 10px;
+          padding-left: 20px;
+          font-size: 20px;
+          display: none;
+        }
+      }
+    }
+    .open {
+      display: block;
+    }
+  }
+}
+
+.main-container {
+  .main-content {
+    .content {
+      .container {
+        .caption {
+          color: var(--colorwhite);
+        }
+        .contact-text-pink {
+          color: var(--colorpink);
+        }
+        .contact-text {
+          color: var(--colorwhite);
+        }
+        .contact {
+          .contact-item {
+            i {
+              color: var(--colorpink);
+            }
+            h5 {
+              color: var(--colorwhite);
+            }
+            a {
+              color: var(--colorgrey);
+            }
+          }
+        }
+        form {
+          .nameandemail {
+            #name {
+              background-color: var(--colorgrey);
+            }
+            #email {
+              background-color: var(--colorgrey);
+
+              color: rgb(207, 203, 203);
+            }
+          }
+
+          .subject-text {
+            #subject {
+              background-color: var(--colorgrey);
+
+              color: rgb(207, 203, 203);
+            }
+          }
+          .message-part {
+            #text {
+              background-color: var(--colorgrey);
+
+              color: rgb(207, 203, 203);
+            }
+          }
+          #send {
+            background-color: var(--colorpink);
+            color: var(--colorwhite);
+          }
+        }
+        .error {
+          color: red;
+        }
+      }
+    }
+  }
+}

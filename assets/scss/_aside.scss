@@ -1,0 +1,113 @@
+main {
+  display: flex;
+  aside {
+    width: 250px;
+    height: 100%;
+    background-color: var(--colorwhite);
+    position: fixed;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-right: 1px solid var(--colorgrey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    @media (max-width: 850px) {
+      transform: translateX(-100%);
+    }
+    .main-title {
+      padding-top: 80px;
+      a {
+        font-size: 20px;
+        font-weight: 900;
+        position: relative;
+        padding: 15px 20px;
+        color: var(--colorblack);
+        letter-spacing: 3px;
+        ::before {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-bottom: 4px solid var(--colorpink);
+          border-left: 4px solid var(--colorpink);
+          bottom: 0;
+          left: 0;
+        }
+        ::after {
+          content: "";
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          border-top: 4px solid var(--colorpink);
+          border-right: 4px solid var(--colorpink);
+          top: 0;
+          right: 0;
+        }
+        span {
+          font-family: "Great Vibes", cursive;
+          letter-spacing: 5px;
+          font-size: 35px;
+          color: var(--colorpink);
+        }
+      }
+    }
+    .navBar {
+      .navİtem {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        li {
+          a {
+            border-bottom: 1px solid var(--colorgrey);
+            width: 140px;
+            display: flex;
+            gap: 20px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            color: var(--colorblack);
+            letter-spacing: 2px;
+            &:hover {
+              color: var(--colorpink);
+              transition: all(0.5s);
+            }
+          }
+        }
+        .active {
+          color: var(--colorpink);
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  aside {
+    background-color: var(--colorblack);
+
+    border-right: 1px solid var(--colorgrey);
+
+    .main-title {
+      a {
+        color: var(--colorwhite);
+      }
+    }
+    .navBar {
+      .navİtem {
+        li {
+          a {
+            border-bottom: 1px solid var(--colorgrey);
+
+            color: var(--colorwhite);
+            &:hover {
+              color: var(--colorpink);
+            }
+          }
+        }
+        .active {
+          color: var(--colorpink);
+        }
+      }
+    }
+  }
+}

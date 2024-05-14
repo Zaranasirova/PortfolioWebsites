@@ -1,0 +1,392 @@
+main {
+  .main-content {
+    .content{
+      padding-top: 50px;
+      display: none;
+     font-weight: 200;
+      .container {
+        @include container;
+        .caption {
+          @include title;
+          color: var(--colorblack);
+        }
+        .profession-text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .profession-title {
+            font-size: 28px;
+            color: var(--colorblack);
+            span {
+              color: var(--colorpink);
+            }
+          }
+          .about-text {
+            color: var(--colorgrey);
+            line-height: 1.8;
+            font-weight: 200;
+          }
+        }
+        .info-skill {
+          padding-top: 40px;
+          display: flex;
+          width: 100%;
+          gap: 20px;
+          @media (max-width: 990px) {
+            flex-direction: column-reverse;
+            gap: 40px;
+          }
+          .info {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @media (max-width: 990px) {
+              width: 100%;
+            }
+            .info-content {
+              display: flex;
+              gap: 40px;
+              @media (max-width: 540px) {
+                flex-direction: column;
+                gap: 60px;
+              }
+              .info-list-left,
+              .info-list-right {
+                ul {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 15px;
+                  li {
+                    border-bottom: 1px solid var(--colorgrey);
+                    padding: 7px 0;
+                    color: var(--colorblack);
+                    font-weight: 400;
+                    font-size: 20px;
+                    span {
+                      color: var(--colorgrey);
+                      font-size: 16px;
+                    }
+                  }
+                }
+              }
+            }
+            .info-btn {
+              display: flex;
+              gap: 10px;
+              .btn {
+                padding: 13px 22px;
+                border: 1px solid transparent;
+                border-radius: 45px;
+                background-color: var(--colorpink);
+                color: var(--colorwhite);
+                font-size: 16px;
+                &:hover {
+                  transform: scale(1.1);
+                  transition: all 0.3s;
+                }
+              }
+            }
+          }
+          .skill {
+            width: 40%;
+         
+            @media (max-width: 990px) {
+              width: 80%;
+            }
+            .skill-item {
+             padding: 0;
+              .skill-item-title {
+                display: flex;
+                justify-content: space-between;
+                h2 {
+                  font-size: 20px;
+                  color: var(--colorblack);
+                }
+                p {
+                  font-size: 16px;
+                  color: var(--colorgrey);
+                }
+              }
+              .skill-box {
+                width: 100%;
+                height: 7px;
+                background-color: var(--colorgrey);
+                border-radius: 5px;
+                position: relative;
+                span {
+                  background-color: var(--colorpink);
+                  height: 7px;
+                  position: absolute;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+        .educationandexperience {
+          padding-top: 50px;
+          display: flex;
+          gap: 10px;
+          padding-bottom: 80px;
+          @media (max-width: 800px) {
+            flex-direction: column-reverse;
+          }
+          .education,
+          .experience {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            gap: 20px;
+            @media (max-width: 800px) {
+              width: 100%;
+            }
+            .experienceandeducation-title {
+              @include title;
+              margin-bottom: 10px;
+              color: var(--colorblack);
+            }
+          }
+          .education-content,
+          .experience-content {
+            border: 1px solid var(--colorgrey);
+            border-radius: 10px;
+            padding: 30px 0 20px 38px;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            &:after {
+              content: "";
+              width: 1px;
+              left: 14px;
+              top: 35px;
+              border: 1px solid var(--colorpink);
+              bottom: 0;
+              display: block;
+              position: absolute;
+              background-color: var(--colorpink);
+            }
+            .education-item {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 5px;
+              &:before {
+                content: "";
+                width: 15px;
+                left: -31px;
+                top: 5px;
+                border: 1px solid var(--colorpink);
+                height: 15px;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                background-color: var(--colorpink);
+              }
+              span {
+                color: var(--colorpink);
+              i{
+                padding-right: 10px;
+                color: var(--colorpink);
+              }
+              }
+              .education-caption {
+                color: var(--colorblack);
+              }
+              .education-text {
+                color: var(--colorblack);
+                font-weight: 200;
+              }
+            }
+          }
+          .experience-content {
+            .experience-item {
+              position: relative;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 5px;
+              &:before {
+                content: "";
+                width: 15px;
+                left: -31px;
+                top: 5px;
+                border: 1px solid var(--colorpink);
+                height: 15px;
+                display: block;
+                position: absolute;
+                border-radius: 50%;
+                background-color: var(--colorpink);
+              }
+              span {
+                color: var(--colorpink);
+              i{
+                padding-right: 10px;
+                color: var(--colorpink);
+              }
+              }
+              .experience-caption {
+                color: var(--colorblack);
+              }
+              .experience-text {
+                color: var(--colorblack);
+                font-weight: 200;
+              }
+            }
+          }
+        }
+      }
+    }
+    .open{
+      display: block;
+    }
+  }
+}
+
+.main-container {
+  .main-content {
+    .content{
+  
+     
+      .container {
+
+        .caption {
+     
+          color: var(--colorwhite);
+        }
+        .profession-text {
+         
+          .profession-title {
+  
+            color: var(--colorwhite);
+            span {
+              color: var(--colorpink);
+            }
+          }
+          .about-text {
+            color: var(--colorgrey);
+   
+          }
+        }
+        .info-skill {
+        
+      
+          .info {
+            
+            .info-content {
+              
+              .info-list-left,
+              .info-list-right {
+                ul {
+                 
+                  li {
+                    border-bottom: 1px solid var(--colorgrey);
+                    color: var(--colorwhite);
+        
+                    span {
+                      color: var(--colorgrey);
+                   
+                    }
+                  }
+                }
+              }
+            }
+            .info-btn {
+             
+              .btn {
+               
+                background-color: var(--colorpink);
+                color: var(--colorwhite);
+                font-size: 16px;
+              
+              }
+            }
+          }
+          .skill {
+            
+            .skill-item {
+           
+              .skill-item-title {
+            
+                h2 {
+              
+                  color: var(--colorwhite);
+                }
+                p {
+              
+                  color: var(--colorgrey);
+                }
+              }
+              .skill-box {
+             
+                background-color: var(--colorgrey);
+            
+                span {
+                  background-color: var(--colorpink);
+                
+                }
+              }
+            }
+          }
+        }
+        .educationandexperience {
+          
+          .education,
+          .experience {
+         
+            .experienceandeducation-title {
+             
+              color: var(--colorwhite);
+            }
+          }
+          .education-content,
+          .experience-content {
+            border: 1px solid var(--colorgrey);
+            
+            
+            .education-item {
+            
+            
+              span {
+                color: var(--colorpink);
+              i{
+            
+                color: var(--colorpink);
+              }
+              }
+              .education-caption {
+                color: var(--colorwhite);
+              }
+              .education-text {
+                color: var(--colorwhite);
+              }
+            }
+          }
+          .experience-content {
+            .experience-item {
+           
+              span {
+                color: var(--colorpink);
+              i{
+              
+                color: var(--colorpink);
+              }
+              }
+              .experience-caption {
+                color: var(--colorwhite);
+              }
+              .experience-text {
+                color: var(--colorwhite);
+              }
+            }
+          }
+        }
+      }
+    }
+   
+  }
+}

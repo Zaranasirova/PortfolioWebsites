@@ -1,0 +1,85 @@
+.menubar {
+  position: fixed;
+  .menubar-icon {
+    font-size: 25px;
+    border: 1px solid transparen;
+    background-color: rgb(211, 211, 211);
+    color: var(--colorpink);
+    padding: 3px 6px;
+    margin-left: 10px;
+    display: none;
+    margin-top: 10px;
+    @media (max-width: 850px) {
+      display: inline-block;
+    }
+  }
+}
+.icons {
+  position: fixed;
+  right: 20px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .gear,
+  .moon-sun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--colorwhite);
+    border: 1px solid var(--colorwhite);
+    border-radius: 50%;
+    transition: all 0.3 s;
+    &:hover {
+      background-color: var(--colorpink);
+    }
+  }
+}
+.home-colors {
+  width: 120px;
+  height: 60px;
+  background-color: rgb(49, 48, 48);
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   display: none;
+  transition: all 0.3s ease;
+  border: 1px solid grey;
+  // padding: 2px;
+  h4 {
+    color: #fff;
+    text-align: center;
+  }
+  .colors {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    .color {
+      width: 20px;
+      height: 20px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+    }
+    .pink {
+      background-color: #ff519f;
+    }
+    .blue {
+      background-color: #35abe2;
+    }
+    .orange {
+      background-color: #ff7b00;
+    }
+    .red {
+      background-color: #e90000;
+    }
+    .green {
+      background-color: #08955c;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@mixin container {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+     position: relative;
+  }
+
+  @mixin title {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 60px;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 38px;
+        height: 2px;
+        bottom: 0;
+        background-color: var(--colorpink);
+        left: 0;
+        border: 1px solid transparent;
+        border-radius: 2px;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        width: 28px;
+        height: 2px;
+        bottom: 0;
+        background-color:var(--colorpink);
+        left: 0;
+       margin-bottom: -8px;
+       border: 1px solid transparent;
+       border-radius: 2px;
+    }
+  }
+
+  .hidden{
+    display: inline-block !important;
+  }
+
+  .open{
+    display: block;
+  }

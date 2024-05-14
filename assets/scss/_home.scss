@@ -1,0 +1,195 @@
+main {
+  .main-content {
+    flex: 1;
+    margin-left: 250px;
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: var(--bgcolor);
+    @media (max-width: 850px) {
+      margin-left: 0;
+    }
+    .content {
+      display: none;
+
+      .container {
+        @include container;
+        .row {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding-top: 100px;
+          @media (max-width: 990px) {
+            flex-direction: column-reverse;
+            gap: 20px;
+          }
+          .part-about {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .about-top {
+              display: flex;
+              flex-direction: column;
+              gap: 25px;
+              .about-title {
+                font-size: 25px;
+                letter-spacing: 0.5px;
+                color: var(--colorblack);
+                @media (max-width: 500px) {
+                  font-size: 18px;
+                }
+                .mark {
+                  color: var(--colorpink);
+                  @media (max-width: 500px) {
+                    font-size: 18px;
+                  }
+                }
+              }
+              .my-profession {
+                font-size: 30px;
+                letter-spacing: 0.5px;
+                color: var(--colorblack);
+                @media (max-width: 500px) {
+                  font-size: 20px;
+                }
+                .mark-profession {
+                  color: var(--colorpink);
+                }
+              }
+              .motivation-letter {
+                color: grey;
+                font-size: 18px;
+                letter-spacing: 0.5px;
+                line-height: 1.6;
+                @media (max-width: 500px) {
+                  font-size: 15px;
+                }
+                .point {
+                  cursor: pointer;
+                }
+                .motivation-letter-more {
+                  display: none;
+                }
+              }
+            }
+            .home-button {
+              &:hover {
+                transform: scale(1.1);
+                transition: all 0.3s;
+              }
+              .btn {
+                padding: 13px 22px;
+                border: 1px solid transparent;
+                border-radius: 45px;
+                background-color: var(--colorpink);
+                color: var(--colorwhite);
+                font-size: 16px;
+              }
+            }
+          }
+          .img-about {
+            .img {
+              width: 100%;
+              padding: 40px 80px;
+              position: relative;
+
+              @media (max-width: 650px) {
+                padding: 20px 40px;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                border-top: 5px solid var(--colorpink);
+                border-left: 5px solid var(--colorpink);
+                width: 80px;
+                height: 80px;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                border-bottom: 5px solid var(--colorpink);
+                border-right: 5px solid var(--colorpink);
+                width: 80px;
+                height: 80px;
+              }
+              img {
+                height: 400px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border-radius: 20px;
+                @media (max-width: 740px) {
+                  height: 200px;
+                }
+                &:hover {
+                  transform: scale(1.1);
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .open {
+      display: block;
+      animation-name: slideSection;
+      animation-duration: 1s;
+    }
+    @keyframes slideSection {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  }
+}
+
+.main-container {
+  .main-content {
+    background-color: var(--colorblack);
+    .content {
+      .container {
+        .row {
+          .part-about {
+            .about-top {
+              .about-title {
+                color: var(--colorwhite);
+
+                .mark {
+                  color: var(--colorpink);
+                }
+              }
+              .my-profession {
+                color: var(--colorwhite);
+
+                .mark-profession {
+                  color: var(--colorpink);
+                }
+              }
+            }
+            .home-button {
+              .btn {
+                background-color: var(--colorpink);
+                color: var(--colorwhite);
+              }
+            }
+          }
+          .img-about {
+            .img {
+              img {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

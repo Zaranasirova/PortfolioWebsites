@@ -1,0 +1,227 @@
+@import "mixin";
+@import "home";
+@import "variable";
+@import "aside";
+@import "about";
+@import "icons";
+@import "portfolio";
+@import "contact";
+// main {
+//   .main-content {
+//     .about-section {
+//       padding-top: 50px;
+//       .container {
+//         @include container;
+//         .caption {
+//           @include title;
+//         }
+//         .profession-text {
+//           display: flex;
+//           flex-direction: column;
+//           gap: 20px;
+//           .profession-title {
+//             font-size: 28px;
+//             span {
+//               color: var(--colorrpink);
+//             }
+//           }
+//           .about-text {
+//             color: var(--colorgrey);
+//             line-height: 1.8;
+//           }
+//         }
+//         .info-skill {
+//           padding-top: 40px;
+//           display: flex;
+//           width: 100%;
+//           gap: 20px;
+//           @media (max-width: 990px) {
+//             flex-direction: column-reverse;
+//             gap: 40px;
+//           }
+//           .info {
+//             width: 60%;
+//             display: flex;
+//             flex-direction: column;
+//             gap: 30px;
+//             @media (max-width: 990px) {
+//               width: 100%;
+//             }
+//             .info-content {
+//               display: flex;
+//               gap: 40px;
+//               @media (max-width: 540px) {
+//                 flex-direction: column;
+//                 gap: 60px;
+//               }
+//               .info-list-left,
+//               .info-list-right {
+//                 ul {
+//                   display: flex;
+//                   flex-direction: column;
+//                   gap: 15px;
+//                   li {
+//                     border-bottom: 1px solid var(--colorgrey);
+//                     padding: 7px 0;
+//                     color: var(--colorblack);
+//                     font-weight: 400;
+//                     font-size: 20px;
+//                     span {
+//                       color: var(--colorgrey);
+//                       font-size: 16px;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//             .info-btn {
+//               display: flex;
+//               gap: 10px;
+//               &:hover {
+//                 transform: scale(1.1);
+//                 transition: all 0.3s;
+//               }
+//               .btn {
+//                 padding: 13px 22px;
+//                 border: 1px solid transparent;
+//                 border-radius: 45px;
+//                 background-color: var(--colorpink);
+//                 color: var(--colorwhite);
+//                 font-size: 16px;
+//               }
+//             }
+//           }
+//           .skill {
+//             width: 40%;
+//             @media (max-width: 990px) {
+//               width: 80%;
+//             }
+//             .skill-item {
+//               padding-top: 9px;
+//               .skill-item-title {
+//                 display: flex;
+//                 justify-content: space-between;
+//                 h2 {
+//                   font-size: 20px;
+//                   color: var(--colorwhite);
+//                 }
+//                 p {
+//                   font-size: 16px;
+//                   color: var(--colorwhite);
+//                 }
+//               }
+//               .skill-box {
+//                 width: 100%;
+//                 height: 7px;
+//                 background-color: var(--colorgrey);
+//                 border-radius: 5px;
+//                 position: relative;
+//                 span {
+//                   background-color: var(--colorpink);
+//                   height: 7px;
+//                   position: absolute;
+//                   border-radius: 5px;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         .educationandexperience {
+//           padding-top: 50px;
+//           display: flex;
+//           gap: 10px;
+//           padding-bottom: 80px;
+//           @media (max-width: 800px) {
+//             flex-direction: column-reverse;
+//           }
+//           .education,
+//           .experience {
+//             display: flex;
+//             flex-direction: column;
+//             width: 50%;
+//             gap: 20px;
+//             @media (max-width: 800px) {
+//               width: 100%;
+//             }
+//             .experienceandeducation-title {
+//               @include title;
+//               margin-bottom: 10px;
+//             }
+//             .education-content {
+//               border: 1px solid var(--colorgrey);
+//               border-radius: 10px;
+//               padding: 30px 0 20px 38px;
+//               position: relative;
+//               height: 100%;
+//               display: flex;
+//               flex-direction: column;
+//               gap: 15px;
+//               &:after {
+//                 content: "";
+//                 width: 1px;
+//                 left: 14px;
+//                 top: 35px;
+//                 border: 1px solid var(--colorpink);
+//                 bottom: 0;
+//                 display: block;
+//                 position: absolute;
+//                 background-color: var(--colorpink);
+//               }
+//               .education-item {
+//                 position: relative;
+//                 &:before {
+//                   content: "";
+//                   width: 15px;
+//                   left: -31px;
+//                   top: 5px;
+//                   border: 1px solid var(--colorpink);
+//                   height: 15px;
+//                   display: block;
+//                   position: absolute;
+//                   border-radius: 50%;
+//                   background-color: var(--colorpink);
+//                 }
+//               }
+//             }
+//             .experience-content {
+//               border: 1px solid var(--colorgrey);
+//               border-radius: 10px;
+//               padding: 30px 0 20px 38px;
+//               position: relative;
+//               height: 100%;
+//               display: flex;
+//               flex-direction: column;
+//               gap: 15px;
+//               &:after {
+//                 content: "";
+//                 width: 1px;
+//                 left: 14px;
+//                 top: 35px;
+//                 border: 1px solid var(--colorpink);
+//                 bottom: 0;
+//                 display: block;
+//                 position: absolute;
+//                 background-color: var(--colorpink);
+//               }
+//               .experience-item {
+//                 position: relative;
+//                 &:before {
+//                   content: "";
+//                   width: 15px;
+//                   left: -31px;
+//                   top: 5px;
+//                   border: 1px solid var(--colorpink);
+//                   height: 15px;
+//                   display: block;
+//                   position: absolute;
+//                   border-radius: 50%;
+//                   background-color: var(--colorpink);
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
